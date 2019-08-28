@@ -6,13 +6,38 @@
 .clearfix {display:block;}
 .blind {position:absolute; left:-99999px; top:-9999999px; font-size:1px;}
 
-header {width:100%; border-bottom:solid 1px #dcdcdc;}
+/*** header ***/
+header {width:100%; border-bottom:solid 1px #dcdcdc; box-shadow:1px 1px 1px #ddd}
 .header_inner {position:relative;max-width:1080px; width:100%; height:80px; margin:0 auto;padding:20px 0;}
 #logo {position:absolute;}
-#logo a {display:block; width:164px; height:38px; background-size:cover; background-position:center; background-repeat:no-repeat;}
+#logo a {display:block; width:164px; height:38px; background-image:url(../images/logo.png); background-size:cover; background-position:center; background-repeat:no-repeat;}
+.menu_bar {display:none;float:right;position:relative; height:100%; width:36px;}
+.menu_bar:after {position:absolute;display:block;content:'';width:20px;height:17px;background:url(../images/icon_mb.png)no-repeat 0 -54px; background-size:63px auto; top:50%; margin-top:-8px; left:50%; margin-left:-10px;}
 #gnb {float:right;}
 #gnb ul {}
 #gnb li {float:left;}
 #gnb li a {display:block; font-size:15px; padding:10px; margin-right:18px; font-weight:500;}
 #gnb li:last-child a {padding-right:0; margin-right:0;}
 
+@media (max-width: 720px) {
+    header {border:none}
+    .header_inner {height:48px; padding:10px 0; border-bottom:solid 1px #dcdcdc;}
+    .menu_bar {display:block;margin-right:15px;}
+    #logo {left:15px;}
+    #logo a {width:122px; height:28px; background-image:url(../images/logo_mb.png);}
+    #gnb {width:100%;}
+    #gnb ul {padding-top:10px;}
+    #gnb li {float:none;}
+    #gnb li a {font-size:15px; padding:0; margin:0; text-align:center; width:100%; line-height:48px; background-color:#eee; border-bottom:solid 1px #ddd;}
+}
+@media (max-width: 480px) {
+
+}
+
+/*** kv ***/
+#container {}
+#container .kv {position:relative; background-color:#eee;}
+.kv .kv_inner {max-width:1080px; margin:0 auto;}
+.kv .kv_inner a {display:block; height:0; padding-top:41.6667%; background:url(../images/banner_pc.png)no-repeat;background-position:50% 90%; background-size:contain;}
+
+/*** kv ***/
