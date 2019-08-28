@@ -148,6 +148,8 @@ button {
 }
 a{
 	text-decoration:none;
+	box-sizing:border-box;
+	color:#000;
 }
 img{
 	vertical-align:middle;
